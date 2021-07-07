@@ -1,6 +1,5 @@
 package co.interleap.courses.tdd;
 
-import java.util.Arrays;
 
 public class VowelCounter {
     String input;
@@ -10,16 +9,20 @@ public class VowelCounter {
     }
     public int getCount()
     {
+        return iterateThroughString();
+    }
+
+    private int iterateThroughString() {
         int count=0;
         for(int i=0;i<input.length();i++)
         {
-            count = updateIfVowel(count, input.charAt(i));
+            count = updateIfVowel(count, input.substring(i,i+1));
         }
         return count;
     }
 
-    private int updateIfVowel(int count, char current) {
-        if(current =='a' || current =='A' || current =='e' || current =='E' || current =='i' || current =='I' || current =='o' || current =='O' || current =='u' || current =='U')
+    private int updateIfVowel(int count, String current) {
+        if("aeiouAEIOU".contains(current))
             count++;
         return count;
     }
