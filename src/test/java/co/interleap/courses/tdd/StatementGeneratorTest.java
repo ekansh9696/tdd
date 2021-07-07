@@ -4,7 +4,7 @@ import org.junit.*;
 
 public class StatementGeneratorTest
 {
-    private static final double DELTA = 1e-15;
+    private static final double DELTA = .01;
     @Test
     public void noTravel()
     {
