@@ -8,4 +8,8 @@ public class Ride
         distance=d;
         minutes=m;
     }
+
+    double farePerRide() {
+        return distance * StatementGenerator.FARE_PER_KM + minutes * StatementGenerator.FARE_PER_MINUTE;
+    }
 }

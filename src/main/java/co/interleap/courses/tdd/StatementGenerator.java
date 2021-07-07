@@ -10,7 +10,7 @@ public class StatementGenerator {
         double fare=0;
         for (Ride ride: rides)
         {
-            fare+=ride.distance*FARE_PER_KM+ride.minutes*FARE_PER_MINUTE;
+            fare+= ride.farePerRide();
         }
         return fare;
     }
