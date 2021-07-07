@@ -34,4 +34,16 @@ public class VowelCounterTest {
         VowelCounter v = new VowelCounter("hello there");
         Assert.assertEquals(4,v.getCount());
     }
+    @Test
+    public void complexStringUpperCaseOnly()
+    {
+        VowelCounter v = new VowelCounter("HELLO THERE");
+        Assert.assertEquals(4,v.getCount());
+    }
+    @Test
+    public void complexString()
+    {
+        VowelCounter v = new VowelCounter("Lets GO On A ride , It costs only 5 bUcks");
+        Assert.assertEquals(10,v.getCount());
+    }
 }
