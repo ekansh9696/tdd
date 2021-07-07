@@ -9,7 +9,12 @@ public class VowelCounter {
     public int getCount()
     {
         int count=0;
-        count=input.length();
+        for(int i=0;i<input.length();i++)
+        {
+            char current=input.charAt(i);
+            if(current == 'a' || current == 'e' || current == 'i' || current == 'o' || current == 'u')
+                count++;
+        }
         return count;
     }
 }

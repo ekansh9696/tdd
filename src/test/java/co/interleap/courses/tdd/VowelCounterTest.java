@@ -22,4 +22,10 @@ public class VowelCounterTest {
         VowelCounter v = new VowelCounter("aeiou");
         Assert.assertEquals(5,v.getCount());
     }
+    @Test
+    public void singleConsonantString()
+    {
+        VowelCounter v = new VowelCounter("h");
+        Assert.assertEquals(0,v.getCount());
+    }
 }
