@@ -28,4 +28,10 @@ public class VowelCounterTest {
         VowelCounter v = new VowelCounter("h");
         Assert.assertEquals(0,v.getCount());
     }
+    @Test
+    public void complexStringLowerCaseOnly()
+    {
+        VowelCounter v = new VowelCounter("hello there");
+        Assert.assertEquals(4,v.getCount());
+    }
 }
