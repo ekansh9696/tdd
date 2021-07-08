@@ -4,14 +4,18 @@ import java.util.List;
 
 public class StatementGenerator {
 
-    double getFare(List<Ride> rides)
+    Statement getFare(List<Ride> rides)
     {
+        Statement invoice=new Statement();
         double fare=0;
         for (Ride ride: rides)
         {
             fare+= ride.farePerRide();
         }
-        return fare;
+        invoice.setTotalfare(fare);
+        invoice.setAvgfare(fare/rides.size());
+        invoice.setNumberofrides(rides.size());
+        return invoice;
     }
 
 }
