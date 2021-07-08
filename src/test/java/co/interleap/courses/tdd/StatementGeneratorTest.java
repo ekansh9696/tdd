@@ -30,7 +30,6 @@ public class StatementGeneratorTest
     {
         StatementGenerator v = new StatementGenerator();
         Statement statement= v.getFare(Arrays.asList(new Ride(2.5,30)));
-        Statement expected=new Statement(1,55.0,55.0/1);
         Assert.assertEquals(1,statement.getNumberofrides());
         Assert.assertEquals(55.0,statement.getTotalfare(),DELTA);
         Assert.assertEquals(55.0,statement.getAvgfare(),DELTA);
